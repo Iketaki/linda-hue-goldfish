@@ -44,7 +44,7 @@
       var deg, gyro, hue, range;
       gyro = goldfish.gyroscope();
       angle -= gyro.z * 3;
-      range = 150;
+      range = 75;
       hue = (angle + range) * 65536 / (range * 2);
       if (hue > 65535) {
         hue = 65535;
