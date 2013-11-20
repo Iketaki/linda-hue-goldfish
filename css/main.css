@@ -1,0 +1,41 @@
+body {
+  background-color: #000000;
+  color: #ffffff; }
+
+header {
+  background-color: #333333;
+  margin-bottom: 40px;
+  height: 60px; }
+  header h1 {
+    line-height: 60px;
+    font-size: 200%;
+    text-align: center;
+    margin: 0 auto 0px;
+    text-shadow: #000000 0 -2px 0; }
+
+#main {
+  width: 480px;
+  margin: 0 auto;
+  position: relative; }
+  #main #mark {
+    -moz-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    position: absolute;
+    top: 0; }
+
+#control {
+  margin-top: 40px; }
+  #control .ok_control {
+    text-align: center;
+    margin-bottom: 30px; }
+    #control .ok_control #ok {
+      font-size: 200%;
+      padding: 0 20px; }

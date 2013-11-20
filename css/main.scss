@@ -1,0 +1,67 @@
+@mixin transform ($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+     -moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header {
+  background-color: #333333;
+  margin-bottom: 40px;
+  height: 60px;
+
+  h1 {
+    line-height: 60px;
+    font-size: 200%;
+    text-align: center;
+    margin: 0 auto 0px;
+
+    text-shadow: #000000 0 -2px 0;
+  }
+}
+
+#main {
+  width: 480px;
+  margin: 0 auto;
+  position: relative;
+
+  #mark {
+    @include rotate(35);
+    @include transform-origin(50% 100%);
+
+    position: absolute;
+    top: 0;
+  }
+}
+
+#control {
+  margin-top: 40px;
+
+  .ok_control {
+    text-align: center;
+    margin-bottom: 30px;
+
+    #ok {
+      font-size: 200%;
+      padding: 0 20px;
+    }
+  }
+}

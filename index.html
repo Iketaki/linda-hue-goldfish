@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goldfish hue Controller</title>
+  <meta charset="UTF-8">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Hue Control</h1>
+  </header>
+
+  <div id="main">
+    <img src="./img/rainbow.png">
+    <img src="./img/mark.png" id="mark">
+  </div>
+
+  <div id="control">
+    <div class="ok_control">
+      <input type="button" value="OK" id="ok">
+    </div>
+
+    <input type="button" value="ON" id="on">
+    <input type="button" value="OFF" id="off">
+
+    <input type="button" value="red" id="red">
+    <input type="button" value="blue" id="blue">
+    <input type="button" value="yellow" id="yellow">
+    <input type="button" value="green" id="green">
+
+    <p id="status"></p>
+    <div id="log"></div>
+  </div>
+
+  <script src="./js/jquery-2.0.3.min.js"></script>
+  <script src="./js/linda.min.js"></script>
+  <script src="http://ubif.org/goldfish/js/goldfish.js" type="application/javascript"></script>
+  <script src="./js/main.js" type="application/javascript"></script>
+</body>
+</html>
