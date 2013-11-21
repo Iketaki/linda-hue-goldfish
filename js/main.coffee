@@ -52,7 +52,7 @@ $ ->
     $("#mark").css("-webkit-transform", "rotate(#{deg}deg)")
 
     cnt += 1
-    if cnt == 20
+    if cnt == 10
       ts.write ["hue", HUE_NUMBER, "hsb", hue, 255, 255]
       $("#log").prepend $("<p>").text("hue: #{hue}")
       cnt = 0
