@@ -39,7 +39,10 @@ $ ->
     gyro = goldfish.gyroscope()
     angle -= (gyro.z * 3)
 
-    range = 75
+    range = 75 # 0 < angle < 150
+    error_diff = 100
+    if angle < -error_diff || range * 2 + error_diff
+      goldfish.exit()
 
     hue = (angle + range) * 65536 / (range*2)
     hue = 65535 if hue > 65535
