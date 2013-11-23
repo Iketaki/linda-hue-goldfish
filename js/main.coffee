@@ -5,29 +5,29 @@ ts = new linda.TupleSpace("delta")
 io.on "connect", ->
   $("#status").text "Status: #{io.type} connect"
 
-HUE_NUMBER = 0
+hue_number = Number(location.hash.slice(1))
 
 $ ->
   $("#on").click ->
-    ts.write ["hue", HUE_NUMBER, "on"]
+    ts.write ["hue", hue_number, "on"]
 
   $("#off").click ->
-    ts.write ["hue", HUE_NUMBER, "off"]
+    ts.write ["hue", hue_number, "off"]
 
   # From hue document
   # Hue of the light. This is a wrapping value between 0 and 65535. Both 0 and 65535 are red, 25500 is green and 46920 is blue.
 
   $("#red").click ->
-    ts.write ["hue", HUE_NUMBER, "hsb", 0, 255, 255]
+    ts.write ["hue", hue_number, "hsb", 0, 255, 255]
 
   $("#yellow").click ->
-    ts.write ["hue", HUE_NUMBER, "hsb", 19000, 255, 255]
+    ts.write ["hue", hue_number, "hsb", 19000, 255, 255]
 
   $("#green").click ->
-    ts.write ["hue", HUE_NUMBER, "hsb", 25500, 255, 255]
+    ts.write ["hue", hue_number, "hsb", 25500, 255, 255]
 
   $("#blue").click ->
-    ts.write ["hue", HUE_NUMBER, "hsb", 46920, 255, 255]
+    ts.write ["hue", hue_number, "hsb", 46920, 255, 255]
 
   $("#ok").click ->
     goldfish.exit()
@@ -57,7 +57,7 @@ $ ->
 
     cnt += 1
     if cnt == 10
-      ts.write ["hue", HUE_NUMBER, "hsb", hue, 255, 255]
+      ts.write ["hue", hue_number, "hsb", hue, 255, 255]
       $("#log").prepend $("<p>").text("hue: #{hue}")
       cnt = 0
   , 50
