@@ -41,7 +41,8 @@ $ ->
 
     range = 75 # 0 < angle < 150
     error_diff = 100
-    if angle < -error_diff || range * 2 + error_diff
+
+    if angle < -error_diff || angle > range * 2 + error_diff
       goldfish.exit()
 
     hue = (angle + range) * 65536 / (range*2)
